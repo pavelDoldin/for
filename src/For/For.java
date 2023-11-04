@@ -2,7 +2,25 @@ package For;
 
 public class For {
     public static void main(String[] args) {
-        ex3();
+        ex5();
+    }
+    static void ex5(){
+        // Вывести на экран числа от 0 до 30 включительно с интервалом 5
+
+        int count = 30;
+        for (int i = 0; i <= count; i +=5) {
+            System.out.println(i);
+        }
+    }
+    static void ex4(){
+        // Найти факториал n - числа
+
+        int count = 5;
+        int res = 1;
+        for (int i = 1; i <= count; i++) {
+            res *= i;
+        }
+        System.out.println(res);
     }
     static void ex3(){
         /*
@@ -14,7 +32,12 @@ public class For {
         если пользователь введет число 5. Программа должна посчитать сумму чисел от 1 до 5,
         то есть 1+2+3+4+5 и выдать ответ 15.
          */
-
+        int sum = 0;
+        int count = 5;
+        for (int i = 1; i <= count; i++) {
+            sum += i;
+        }
+        System.out.println(sum);
     }
     static void ex2(){
         //Необходимо вывести на экран таблицу умножения на 3:
