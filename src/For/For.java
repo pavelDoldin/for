@@ -1,8 +1,34 @@
 package For;
 
+import java.util.Arrays;
+import java.util.Random;
+
 public class For {
     public static void main(String[] args) {
-        ex7();
+        ex8();
+    }
+    static void ex8(){
+        /*
+        Напишите программу, которая генерирует 25 случайных чисел типа int,
+        для каждого значения команда if - else сообщает, в каком отношении оно находится
+        с другим числом(>, < или =).
+         */
+
+        int[] array = new Random().ints(26,20,46).toArray();
+
+        System.out.println(Arrays.toString(array));
+
+        for (int i = 0; i < array.length-1 ; i++) {
+            if (array[i] > array[i + 1]){
+                System.out.println(array[i] + " > " + array[i +1]);
+            }
+            else if (array[i] < array[i + 1]){
+                System.out.println(array[i] + " < " + array[i + 1]);
+            }
+            else {
+                System.out.println(array[i] + " = " + array[i +1]);
+            }
+        }
     }
     static void ex7(){
         //Объявляются 2 целочисленных переменных и им присваиваются значения.
