@@ -2,7 +2,20 @@ package For;
 
 public class For {
     public static void main(String[] args) {
-        ex6();
+        ex7();
+    }
+    static void ex7(){
+        //Объявляются 2 целочисленных переменных и им присваиваются значения.
+        // Вывести на экран в интервале от меньшего к большему все чётные числа.
+
+        int i = 5;
+        int count = 15;
+
+        for (; i <=count ; i++) {
+            if (i % 2 == 0){
+                System.out.println(i);
+            }
+        }
     }
     static void ex6(){
         //Вывести на экран числа от 5 до 95 включительно с интервалом 10
