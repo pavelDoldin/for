@@ -2,7 +2,15 @@ package For;
 
 public class For {
     public static void main(String[] args) {
-        ex5();
+        ex6();
+    }
+    static void ex6(){
+        //Вывести на экран числа от 5 до 95 включительно с интервалом 10
+
+        int count = 95;
+        for (int i = 5; i <= count ; i+=10) {
+            System.out.println(i);
+        }
     }
     static void ex5(){
         // Вывести на экран числа от 0 до 30 включительно с интервалом 5
