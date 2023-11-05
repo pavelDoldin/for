@@ -7,14 +7,27 @@ public class For {
     public static void main(String[] args) {
         ex8();
     }
+    static void ex9(){
+
+    }
     static void ex8(){
         /*
         Напишите программу, которая генерирует 25 случайных чисел типа int,
         для каждого значения команда if - else сообщает, в каком отношении оно находится
         с другим числом(>, < или =).
          */
+        Random random = new Random();
 
-        int[] array = new Random().ints(26,20,46).toArray();
+        int saiz = random.nextInt(1,25);
+        int [] array = new int[saiz];
+
+        System.out.println(saiz);
+
+        for (int i = 0; i < array.length; i++) {
+            array[i] = random.nextInt(20, 46);
+        }
+
+        //int[] array = new Random().ints(26,20,46).toArray();
 
         System.out.println(Arrays.toString(array));
 
