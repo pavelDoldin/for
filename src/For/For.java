@@ -5,7 +5,43 @@ import java.util.Random;
 
 public class For {
     public static void main(String[] args) {
-        ex9();
+        ex10();
+    }
+    static void ex10(){
+
+        /*
+        Дан мфссив nums = [3, 2, 5, 3] и число val = 3 и тог: [2, 5, 3, 3]
+        Если в массиве есть числа, равные заданном, нужно перенести эти элементы в конец массива.
+        Таким образзом, первые несколько (или все) элементов массива должны быть отличны от задонного,
+        а остальные - равны ему.
+         */
+        Random random = new Random();
+
+        int syiz = random.nextInt(5,21);
+        int[] nums = new int[syiz];
+        int val = 3;
+
+
+        for (int i = 0; i < nums.length; i++) {
+            nums[i] = random.nextInt(10);
+        }
+
+        System.out.println(Arrays.toString(nums));
+
+
+        int[] res = new int[nums.length];
+        Arrays.fill(res, val);
+
+
+        for (int i = 0, j = 0; i < nums.length; i++) {
+            if (nums[i] != val){
+                res[j] = nums[i];
+                j++;
+            }
+        }
+
+        System.out.println(Arrays.toString(res));
+
     }
     static void ex9(){
     //Дан массив двоичных чисел, например [1,1,0,1,1,1], вывести максимальное количество подряд идущих 1.
@@ -154,5 +190,4 @@ public class For {
             System.out.println(i);
         }
     }
-
 }
