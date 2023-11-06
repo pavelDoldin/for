@@ -5,10 +5,39 @@ import java.util.Random;
 
 public class For {
     public static void main(String[] args) {
-        ex8();
+        ex9();
     }
     static void ex9(){
+    //Дан массив двоичных чисел, например [1,1,0,1,1,1], вывести максимальное количество подряд идущих 1.
 
+        Random random = new Random();
+
+        int count = 0;
+        int countMax = 0;
+        int a = 1;
+        int size = random.nextInt(5,15);
+        int[] arr = new int[size];
+        System.out.println(size);
+
+        for (int i = 0; i < arr.length; i++) {
+           arr[i] = random.nextInt(2);
+           if (arr[i] == a){
+               count++;
+           }
+           else {
+               if (count > countMax){
+                   countMax = count;
+               }
+               count = 0;
+           }
+
+        }
+        if (count > countMax){
+            countMax = count;
+        }
+
+        System.out.println(Arrays.toString(arr));
+        System.out.println(countMax);
     }
     static void ex8(){
         /*
