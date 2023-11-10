@@ -1,11 +1,43 @@
 package For;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Random;
 
 public class For {
     public static void main(String[] args) {
-        ex10();
+
+
+        ex11();
+    }
+    static void ex11(){
+
+        // Поработать и ArrayList
+        ArrayList<Integer> integerArrayList = new ArrayList<>();
+        integerArrayList.add(8);
+
+        ArrayList arrayList = new ArrayList<>();
+        arrayList.add("123");
+        arrayList.add(12);      // метод add добовляет в список
+        arrayList.add(123);
+
+
+
+        System.out.println(arrayList);
+        System.out.println(arrayList.size()); // Выведет количество элементов в списке
+        System.out.println(arrayList.get(2)); // Выведет по индексу значение
+        System.out.println();
+        arrayList.set(0,1);                   // Добавит элемент под индексом
+        //arrayList.remove(2);            // Удалит по индексу
+
+        System.out.println(arrayList);
+
+        System.out.println(arrayList.subList(0,1));
+
+
+
+
     }
     static void ex10(){
 
@@ -20,13 +52,27 @@ public class For {
         int syiz = random.nextInt(5,21);
         int[] nums = new int[syiz];
         int val = 3;
+        int a; // временная для val
+        int b; // временная
 
 
         for (int i = 0; i < nums.length; i++) {
-            nums[i] = random.nextInt(10);
+            nums[i] = random.nextInt(5);
         }
 
         System.out.println(Arrays.toString(nums));
+
+        //for (int i = 0, j = nums.length - 1; i < nums.length; i++) {
+        //    if (nums[i] == val){
+        //        a = nums[i];
+        //        b = nums[j];
+        //        nums[i] = b;                          //   Доработать
+        //        nums[nums.length - 1] = a;
+        //        j--;
+        //    }
+//
+        //}
+        //System.out.println(Arrays.toString(nums));
 
 
         int[] res = new int[nums.length];
