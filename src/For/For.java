@@ -9,7 +9,71 @@ public class For {
     public static void main(String[] args) {
 
 
-        ex11();
+        ex13();
+    }
+    static void ex13(){
+
+        /*
+         написать пузырьковый в цикле while
+         */
+    Random random = new Random();
+
+    int syez = random.nextInt(3,10);
+
+    int[] arr = new int[syez];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = random.nextInt(0, 11);
+        }
+
+        System.out.println(Arrays.toString(arr));
+
+
+        int temp;
+        boolean sort = false;
+        while (!sort){
+            sort = true;
+            for (int i = 0; i < arr.length - 1; i++) {
+                if (arr[i] > arr[i + 1]){
+                    temp = arr[i];
+                    arr[i] = arr[i + 1];
+                    arr[i + 1] = temp;
+                    sort = false;
+                }
+            }
+        }
+        System.out.println(Arrays.toString(arr));
+
+    }
+    static void ex12(){
+        /*
+        Написать пузырьковый метод сортировки
+         */
+
+        Random random = new Random();
+        int seyz = random.nextInt(4, 8);
+
+        int[] arr = new int[seyz];
+
+        for (int i = 0; i < seyz; i++) {
+            arr[i] = random.nextInt(0,10);
+        }
+        System.out.println(Arrays.toString(arr));
+
+        int temp;
+// не совиршенный метод так как он дудет делаться столько раз сколько элеменнтов в массиве,
+// а отсортироваться он может раньше
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length - 1; j++) {
+                if (arr[j] > arr[j + 1]){
+                    temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j +1] = temp;
+                }
+            }
+        }
+        System.out.println(Arrays.toString(arr));
+
     }
     static void ex11(){
 
@@ -52,8 +116,8 @@ public class For {
         int syiz = random.nextInt(5,21);
         int[] nums = new int[syiz];
         int val = 3;
-        int a; // временная для val
-        int b; // временная
+
+
 
 
         for (int i = 0; i < nums.length; i++) {
@@ -62,12 +126,15 @@ public class For {
 
         System.out.println(Arrays.toString(nums));
 
+
         //for (int i = 0, j = nums.length - 1; i < nums.length; i++) {
-        //    if (nums[i] == val){
-        //        a = nums[i];
-        //        b = nums[j];
-        //        nums[i] = b;                          //   Доработать
-        //        nums[nums.length - 1] = a;
+        //    int temp;
+        //    if (nums[i] != val){
+        //        i++;
+        //    } else {
+        //        temp = nums[j];               Доработать
+        //        nums[j] = nums[i];
+        //        nums[i] = temp;
         //        j--;
         //    }
 //
@@ -80,11 +147,11 @@ public class For {
 
 
         for (int i = 0, j = 0; i < nums.length; i++) {
-            if (nums[i] != val){
-                res[j] = nums[i];
-                j++;
+                if (nums[i] != val){
+                        res[j] = nums[i];
+                        j++;
+                    }
             }
-        }
 
         System.out.println(Arrays.toString(res));
 
