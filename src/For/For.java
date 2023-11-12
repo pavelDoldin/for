@@ -5,15 +5,54 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Random;
 
+
+
 public class For {
     public static void main(String[] args) {
 
-        System.out.println(ex14());
+        ex15();
+    }
+    static void ex15(){
+
+        /*
+        Создать список планет, в произвольном порядке и с повторениями
+        посчитать повторения
+         */
+        Random random = new Random();
+
+        ArrayList<String> planets = new ArrayList<>();
+        planets.add("Меркурий");
+        planets.add("Плутон");
+        planets.add("Сатурн");
+        planets.add("Юпитер");
+        planets.add("Венера");
+        planets.add("Нептун");
+        planets.add("Земля");
+        planets.add("Марс");
+        planets.add("Уран");
+
+        ArrayList<String> randomPlanet = new ArrayList<>();
+        int n = 30;
+        for (int i = 0; i < n; i++) {
+            randomPlanet.add(planets.get(random.nextInt(planets.size())));
+        }
+        
+        System.out.println(randomPlanet);
+
+        for (String planet : planets) {
+            int count = 0;
+            for (String item : randomPlanet) {
+                if (planet.equals(item)){
+                    count++;
+                }
+            }
+            System.out.println(planet + " : " + count);
+        }
     }
     static boolean ex14(){
 
         // проверить слово на полиндром
-        String str = "потопf";
+        String str = "потоп";
 
         for (int i = 0; i < str.length() / 2; i++) {
             if (str.charAt(i) != str.charAt(str.length() - 1 - i)){
