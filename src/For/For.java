@@ -1,18 +1,66 @@
 package For;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.Random;
-
+import java.util.*;
 
 
 public class For {
     public static void main(String[] args) {
 
-        ex15();
+        ex17();
     }
-    static void ex15(){
+    static void ex17(){
+
+        /*
+        Распарсить текст по","
+
+        Мы боимся неизведанной территории, на которую вступили и
+        шокированы, свирепостью экстремальных, погодных явлений в 2023 году
+         */
+        ArrayList<String > list = new ArrayList<>();
+
+        String text = "Мы боимся неизведанной территории на которую вступили и \n" +
+                "шокированы свирепостью экстремальных погодных явлений в 2023 году";
+
+        String[] textFinish = text.split(" ");
+
+        String res = "";
+
+        for (int i = textFinish.length - 1; i >= 0; i--) {
+            //res += textFinish[i] + " ";
+            list.add(textFinish[i]);
+        }
+        //System.out.println(res);
+
+        //System.out.println("_________________________");
+        //Collections.reverse(list);
+
+        System.out.println(list);
+
+    }
+
+    static void ex16() {
+
+        int[] arr = new int[]{1, 3, 0, 5, 3, 6, 3};
+        int val = 3;
+        int temp;
+
+        for (int i = 0, j = arr.length - 1; i < arr.length; i++) {
+            if (arr[j] == val) {
+                j--;
+            }
+            if (arr[i] == val) {
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+                j--;
+
+            }
+
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+
+    static void ex15() {
 
         /*
         Создать список планет, в произвольном порядке и с повторениями
@@ -36,26 +84,27 @@ public class For {
         for (int i = 0; i < n; i++) {
             randomPlanet.add(planets.get(random.nextInt(planets.size())));
         }
-        
+
         System.out.println(randomPlanet);
 
         for (String planet : planets) {
             int count = 0;
             for (String item : randomPlanet) {
-                if (planet.equals(item)){
+                if (planet.equals(item)) {
                     count++;
                 }
             }
             System.out.println(planet + " : " + count);
         }
     }
-    static boolean ex14(){
+
+    static boolean ex14() {
 
         // проверить слово на полиндром
         String str = "потоп";
 
         for (int i = 0; i < str.length() / 2; i++) {
-            if (str.charAt(i) != str.charAt(str.length() - 1 - i)){
+            if (str.charAt(i) != str.charAt(str.length() - 1 - i)) {
                 return false;
             }
         }
@@ -179,11 +228,11 @@ public class For {
         Arrays.fill(res, val);
 
         for (int i = 0, j = 0; i < nums.length; i++) {
-                if (nums[i] != val){
-                        res[j] = nums[i];
-                        j++;
-                    }
+            if (nums[i] != val) {
+                res[j] = nums[i];
+                j++;
             }
+        }
 
         System.out.println(Arrays.toString(res));
 
