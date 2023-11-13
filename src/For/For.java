@@ -6,9 +6,38 @@ import java.util.*;
 public class For {
     public static void main(String[] args) {
 
-        ex19();
+        ex20();
     }
+    static void ex20(){
 
+        //Реализуйте структуру телефонной книги с помощью HashMap, учитывая, что 1 человек может иметь
+        // несколько телефонов.
+
+        Map<String, String> map = new HashMap<>();
+
+        map.put("1234621245", "Павел");
+        map.put("3211569565", "Виктор");
+        map.put("1324796354", "Павел");
+        map.put("3691485217", "Виктор");
+        map.put("5691564778", "Алина");
+        map.put("7894827475", "Влад");
+        map.put("3573353247", "Виктор");
+
+
+        String name = "Павел";
+        Map<String, List<String>> listMap = new HashMap<>();
+
+
+        for (Map.Entry<String, String> entry : map.entrySet()) {
+            if (entry.getValue().equals(name)){
+                listMap.put(entry.getKey(), Collections.singletonList(name));
+            }
+        }
+        System.out.println(listMap);
+
+
+
+    }
     static void ex19() {
         /*
         Создать структуру для хранения Номеров паспортов и Фамилий сотрудников организации.
