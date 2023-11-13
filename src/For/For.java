@@ -6,9 +6,58 @@ import java.util.*;
 public class For {
     public static void main(String[] args) {
 
-        ex17();
+        ex18();
     }
-    static void ex17(){
+
+    static void ex18() {
+        /*
+        Создать массив и произвести с элементами логические операции + - * /
+         */
+        Random random = new Random();
+
+        int size = random.nextInt(3, 4);
+
+        int[] arr = new int[size];
+
+        int sum = 0;        // сумма чисел
+
+
+
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = random.nextInt(1, 10);
+        }
+        System.out.println(Arrays.toString(arr));
+
+        // Находим сумму массива
+        for (int i = 0; i < arr.length; i++) {
+            sum = sum + arr[i];
+        }
+        System.out.println("Сумма массива: " + sum);
+
+        int subtraction = sum;    // вычетание
+        // Вычетание
+        for (int i = 0; i < arr.length; i++) {
+            subtraction = subtraction - arr[i];
+        }
+        System.out.println("Вычетаем из суммы массива arr: " + subtraction);
+
+        int multiply = 1;
+        // Умножение
+        for (int i = 0; i < arr.length; i++) {
+            multiply = multiply * arr[i];
+        }
+        System.out.println("Умножение: " + multiply);
+
+        double division = sum; // Деление
+        int count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            count++;
+        }
+        System.out.println(division / count);
+
+    }
+
+    static void ex17() {
 
         /*
         Распарсить текст по","
@@ -16,7 +65,7 @@ public class For {
         Мы боимся неизведанной территории, на которую вступили и
         шокированы, свирепостью экстремальных, погодных явлений в 2023 году
          */
-        ArrayList<String > list = new ArrayList<>();
+        ArrayList<String> list = new ArrayList<>();
 
         String text = "Мы боимся неизведанной территории на которую вступили и \n" +
                 "шокированы свирепостью экстремальных погодных явлений в 2023 году";
