@@ -7,6 +7,7 @@ public class For {
     public static void main(String[] args) {
 
         ex20();
+
     }
     static void ex20(){
 
@@ -66,7 +67,6 @@ public class For {
             }
         }
     }
-
 
     static void ex18() {
         /*
