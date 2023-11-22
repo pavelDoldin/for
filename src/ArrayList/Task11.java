@@ -6,6 +6,10 @@ import java.util.List;
 
 public class Task11 {
     public void task11(){
+
+        // Напишите Java-программу для обращения элементов в списке массивов
+
+
         List<Integer> list = new ArrayList<>();
         list.add(0);
         list.add(1);

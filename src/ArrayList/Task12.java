@@ -5,6 +5,8 @@ import java.util.ArrayList;
 public class Task12 {
     void task12(){
 
+        //Напишите программу на Java для извлечения части списка массивов.
+
         List<Object> list = new ArrayList<>();
         list.add(1);
         list.add(0);
