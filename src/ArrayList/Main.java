@@ -6,8 +6,12 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-    Task11 task_11 = new Task11();
-    task_11.task11();
+
+        //Task12 task_12 = new Task12();
+        //task_12.task12();
+
+    //Task11 task_11 = new Task11();
+    //task_11.task11();
 
     //Task10 task_10 = new Task10();
     //task_10.task10();
