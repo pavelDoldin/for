@@ -24,7 +24,13 @@ public class Task13 {
         List<String> list3 = new ArrayList<>();
 
         for (String s : list1) {
-            list3.add(list2.contains(s) ? "Yes" : "No");
+            if (list2.contains(s)){
+                list3.add("Yes");
+            }
+            else {
+                list3.add("No");
+            }
+            //list3.add(list2.contains(s) ? "Yes" : "No");
         }
         System.out.println(list3);
     }
