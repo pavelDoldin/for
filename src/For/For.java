@@ -6,7 +6,10 @@ import java.util.*;
 public class For {
     public static void main(String[] args) {
 
-        ex20();
+        ex21();
+
+    }
+    static void ex21() {
 
     }
     static void ex20(){
@@ -450,6 +453,7 @@ public class For {
             res *= i;
         }
         System.out.println(res);
+
     }
 
     static void ex3() {
